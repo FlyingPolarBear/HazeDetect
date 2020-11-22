@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="haze.css">
+    <title>雾霾探测系统</title>
+</head>
+
+<body id="Background">
+    <!-- 顶部导航栏 -->
+    <h5>
+        <span class="smallbox">
+            <script>
+                var today = new Date();
+                today.setTime(today.getTime());
+                document.write(today)
+            </script>
+        </span>
+        <span class="smallbox">欢迎使用</span>
+    </h5>
+
+    <!-- 标题 -->
+    <h1>雾霾探测系统</h1>
+
+    <!-- 定位与实时天气 -->
+    <div class="Block">
+        <h2>本地天气实况</h2>
+        <!-- 定位 -->
+        <div class="subBlock">
+            <h3>定位</h3>
+            <div>
+                <div id="Map" class="subsubBlock"> </div>
+                <div class="subsubBlock">
+                    <div><span>您当前所在城市：</span>
+                        <span id="City"></span></div>
+
+                    <div id="Basic"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 实时天气 -->
+        <div class="subBlock">
+            <h3>实时天气</h3>
+            <div class="subsubBlock">
+                <h4>当前天气情况</h4>
+                <div id="Now"></div>
+            </div>
+            <div class="subsubBlock">
+                <h4>当前空气质量情况</h4>
+                <div id="AQI"></div>
+            </div>
+            <div id="submitTime"></div>
+        </div>
+    </div>
+
+    <!-- 天气预报 -->
+    <div class="Block">
+        <h2>天气预报</h2>
+        <!-- 未来三日天气预报 -->
+        <div class="subBlock">
+            <h3>未来三日天气预报</h3>
+            <div class="subsubBlock">
+                <h4>后1天</h4>
+                <div id="Forecast0"></div>
+            </div>
+            <div class="subsubBlock">
+                <h4>后2天</h4>
+                <div id="Forecast1"></div>
+            </div>
+            <div class="subsubBlock">
+                <h4>后3天</h4>
+                <div id="Forecast2"></div>
+            </div><br><br>
+        </div>
+        <!-- 未来三日温度湿度折线图 -->
+        <div class="subBlock">
+            <h3>未来三日温度湿度折线图</h3>
+            <div>
+                <span class='comment'>红-最高温度/℃</span>
+                <span class='comment'>蓝-最低温度/℃</span>
+                <span class='comment'>绿-相对湿度/%</span>
+            </div>
+            <div id="Chart"></div>
+        </div>
+    </div>
+
+
+    <!-- 底部导航栏 -->
+    <h5>
+
+
+        <span class="smallbox">B级达标测试作品：雾霾探测系统设计</span>
+        <span class="smallbox">v0.3.0</span>
+        <span class="smallbox">作者：吕德锐 赵紫望 汤佳诚</span>
+        <span class="smallbox">©2020 Xidian University</span>
+        <span class="smallbox">数据来源：高德地图＆和风天气</span>
+    </h5>
+
+    <!-- JavaScript代码 -->
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=d174568d0a64d728bd027b0d3e557d71&plugin=AMap.CitySearch">
+    </script>
+    <script src="jquery.js"></script>
+    <script src="haze.js"></script>
+
+</body>
+
+</html>
